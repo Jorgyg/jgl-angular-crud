@@ -1,0 +1,8 @@
+<div class="d-flex flex-wrap p-4">
+    <div class="m-4 d-flex flex-column justify-content-center" *ngFor="let character of characters; let i = index">
+      <img src="{{ character.image }}" alt="">
+      <p class="d-flex justify-content-center">{{ character.name }}</p>
+      <a [routerLink]="['/detalle']" [queryParams]="{ index: i }" class="btn btn-warning">See more</a>
+    </div>
+  </div>
+  
